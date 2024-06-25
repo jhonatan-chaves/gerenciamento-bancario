@@ -1,14 +1,21 @@
 package com.jhonatan.models;
 
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Date;
-
+@Entity
 public class ClienteModel implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idCliente;
     private String nome;
     private LocalDate dataNascimento;

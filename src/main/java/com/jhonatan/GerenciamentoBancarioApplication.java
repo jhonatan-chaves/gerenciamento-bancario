@@ -15,15 +15,7 @@ public class GerenciamentoBancarioApplication {
 	public static void main(String[] args) throws ParseException {
 		SpringApplication.run(GerenciamentoBancarioApplication.class, args);
 
-		ClienteModel cliente = new ClienteModel();
-		cliente.setIdCliente(1L);
-		cliente.setNome("jhonatan chaves");
-		cliente.setDataNascimento(LocalDate.of(1998, 06, 06));
-		cliente.setCpf("122.333.444-85");
 
-
-
-		System.out.println(cliente.toString());
 
 	}
 

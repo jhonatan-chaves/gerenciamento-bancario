@@ -19,7 +19,7 @@ class GerenciamentoBancarioApplicationTests {
 		ClienteModel cliente = new ClienteModel(1L,"jhonatan chaves",
 				LocalDate.of(1998,06,06),"157.878.637-63");
 
-		System.out.println(cliente.toString());
+
 	}
 
 }
