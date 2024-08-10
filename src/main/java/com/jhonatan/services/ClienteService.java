@@ -10,6 +10,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Period;
 import java.util.Optional;
 
 @Service
@@ -23,6 +26,17 @@ public class ClienteService {
 
     @Transactional
     public ClienteModel save(ClienteRecordDTO clienteRecordDTO){
+        if(clienteRepository.findByCpf(clienteRecordDTO.cpf()).isPresent()){
+            throw new RuntimeException("CPF já cadastrado.");
+        }
+
+        LocalDate dataAtual = LocalDate.now();
+        Period idade = Period.between(clienteRecordDTO.dataNascimento(), dataAtual);
+
+        if (idade.getYears() < 18) {
+            throw new RuntimeException("A pessoa é menor de idade.");
+        }
+
         ClienteModel clienteModel = new ClienteModel();
         BeanUtils.copyProperties(clienteRecordDTO,clienteModel);
         return clienteRepository.save(clienteModel);
