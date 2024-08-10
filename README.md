@@ -107,11 +107,4 @@ Sistema de gerenciamento bancario
 * O cenário de **Cadastro de Conta** mostra a sequência de interações entre o cliente, o controlador de conta, o serviço de conta e o repositório de conta.
 * O cenário de **Transferência de Fundos** mostra a sequência de interações entre o cliente, o controlador de conta, o serviço de conta, o repositório de conta e a classe Transação.
 
-### 4. Observações:
-
-* A documentação acima é um guia inicial para o desenvolvimento do sistema.
-* É importante realizar a análise de requisitos com mais detalhes, incluindo as regras de negócio específicas para cada funcionalidade.
-* Os diagramas UML devem ser complementados com outras informações relevantes, como descrições detalhadas das classes e métodos, e exemplos de uso.
-* A implementação do sistema deve levar em consideração os requisitos não funcionais, como segurança, performance e escalabilidade, para garantir a qualidade do sistema.
-* É recomendável realizar testes unitários e testes de integração para garantir a qualidade do código e a funcionalidade do sistema.
-
+### 
